@@ -1,3 +1,6 @@
+/*
+* Algorithms
+* */
 function binarySearch(sortedArray, item) {
 
   let
@@ -41,13 +44,61 @@ function binarySearch(sortedArray, item) {
 
 }
 
+function selectionSort(array) {
+
+  let resultArray = [];
+  let smallest = null;
+
+  const len = array.length;
+
+  for (let i = 0; i < len; i++) {
+
+    smallest = findSmallest(array);
+    resultArray.push(array[smallest]);
+    array.splice(smallest, 1);
+
+  }
+
+  return resultArray;
+
+}
+
+/*
+* Utils
+* */
+
+function findSmallest(array) {
+
+  let smallest = array[0];
+  let smallestIndex = 0;
+
+  array.forEach((element, index) => {
+
+    if (element < smallest) {
+
+      smallest = element;
+      smallestIndex = index;
+
+    }
+
+  });
+
+  return smallestIndex;
+
+}
+
+/*
+* Test data
+* */
 const data = [];
 
-// Заполнение тестового массива значениями
 for (let i = 43; i < 100; i++) {
 
   data.push(i);
 
 }
 
+/*
+* Output
+* */
 console.log(binarySearch(data, 45));
