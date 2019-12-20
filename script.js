@@ -44,6 +44,7 @@ function binarySearch(sortedArray, item) {
 
 }
 
+// Изменяет исходный массив
 function selectionSort(array) {
 
   let resultArray = [];
@@ -60,6 +61,33 @@ function selectionSort(array) {
   }
 
   return resultArray;
+
+}
+
+function recursiveSum(array) {
+
+  if (!array.length)
+    return 0;
+
+  return array[0] + recursiveSum(array.slice(1));
+
+}
+
+function recursiveCountElements(array) {
+
+  if (!array.length)
+    return 0;
+
+  return 1 + recursiveCountElements(array.slice(1));
+
+}
+
+function recursiveMaxElement(array) {
+
+  if (array.length === 1)
+    return array[0];
+
+  return Math.max(array[0], recursiveMaxElement(array.slice(1)));
 
 }
 
@@ -87,18 +115,37 @@ function findSmallest(array) {
 
 }
 
+function random(start, stop) {
+
+  return Math.random() * (stop - start) + start;
+
+}
+
+function randomInt(start, stop) {
+
+  return Math.round(random(start, stop));
+
+}
+
 /*
 * Test data
 * */
 const data = [];
 
-for (let i = 43; i < 100; i++) {
+for (let i = 30; i < 100; i++) {
 
-  data.push(i);
+  data.push(randomInt(1, 100));
 
 }
 
 /*
 * Output
 * */
-console.log(binarySearch(data, 45));
+console.log(data);
+const sortedArray = selectionSort(data);
+console.log(sortedArray);
+
+console.log(binarySearch(sortedArray, 45));
+console.log(recursiveSum(sortedArray));
+console.log(recursiveCountElements(sortedArray));
+console.log(recursiveMaxElement(sortedArray)); // Имитация Math.max(...sortedArray)
