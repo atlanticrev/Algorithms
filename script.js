@@ -96,7 +96,8 @@ function quicksort(array) {
   if (array.length < 2)
     return array;
 
-  let pivot = array[0];
+  // От выбора этого числа зависит скорость алгоритма
+  let pivot = array[randomInt(0, array.length - 1)];
 
   let lesserElements = array.slice(1).filter((element) => {return element <= pivot});
 
