@@ -91,6 +91,20 @@ function recursiveMaxElement(array) {
 
 }
 
+function quicksort(array) {
+
+  if (array.length < 2)
+    return array;
+
+  let pivot = array[0];
+
+  let lesserElements = array.slice(1).filter((element) => {return element <= pivot});
+
+  let greaterElements = array.slice(1).filter((element) => {return element > pivot});
+
+  return quicksort(lesserElements).concat([pivot]).concat(quicksort(greaterElements));
+}
+
 /*
 * Utils
 * */
@@ -132,7 +146,7 @@ function randomInt(start, stop) {
 * */
 const data = [];
 
-for (let i = 30; i < 100; i++) {
+for (let i = 0; i < 5; i++) {
 
   data.push(randomInt(1, 100));
 
@@ -142,10 +156,10 @@ for (let i = 30; i < 100; i++) {
 * Output
 * */
 console.log(data);
-const sortedArray = selectionSort(data);
+const sortedArray = quicksort(data);
 console.log(sortedArray);
 
-console.log(binarySearch(sortedArray, 45));
-console.log(recursiveSum(sortedArray));
-console.log(recursiveCountElements(sortedArray));
-console.log(recursiveMaxElement(sortedArray)); // Имитация Math.max(...sortedArray)
+// console.log(binarySearch(sortedArray, 45));
+// console.log(recursiveSum(sortedArray));
+// console.log(recursiveCountElements(sortedArray));
+// console.log(recursiveMaxElement(sortedArray)); // Имитация Math.max(...sortedArray)

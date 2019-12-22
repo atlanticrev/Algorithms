@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #1F2125;
+  background-color: #384D67;
 }
 
 .user-interface {
@@ -23,13 +23,13 @@ body {
   min-height: 250px;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: #24635B;
+  background-color: #15A4FA;
 
   /* Стили для шрифта */
   font-size: 56px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #5AA593;
+  color: #073A5A;
 }
 
 .user-interface .control-panel {
@@ -70,60 +70,39 @@ body {
   max-width: 700px;
   display: flex;
   flex-flow: column nowrap;
-  background-color: #2E3034;
+  background-color: #1C324A;
   border-collapse: collapse;
-  border-radius: 20px;
-  color: #BABBBF;
   border: 0;
+
+  color: #537095;
+  font-weight: bold;
 }
 
 .algorithms-list table th {
   border-collapse: collapse;
   padding: 0 5px;
+  border: 1px solid #273E5B;
 }
 
 .algorithms-list table tr:first-child {
-  border: 0;
-  border-radius: 20px;
-  background-color: #57595D;
-  color: #AFB1B5;
-}
-
-.algorithms-list table tr:first-child th:first-child {
-  border-top-left-radius: 20px;
-}
-
-.algorithms-list table tr:first-child th:last-child {
-  border-top-right-radius: 20px;
+  background-color: #1F3650;
 }
 
 .algorithms-list table tr {
-  border-bottom: 2px solid #404145;
-  border-top: 2px solid #404145;
   height: 50px;
-}
-
-.algorithms-list table tr:last-child {
-  border-bottom: 0;
-}
-
-.algorithms-list table tr:not(:first-child):hover {
-  border-bottom: 2px solid #494B4F;
-  border-top: 2px solid #494B4F;
-  background-color: #37393D;
 }
 
 .algorithms-list table td {
   width: 20%;
   text-align: center;
   border-collapse: collapse;
+  border: 1px solid #273E5B;
 }
 
 .algorithms-list table td button {
   width: 80%;
   height: 25px;
   text-align: center;
-  border-radius: 10px;
   font-weight: bold;
   background-color: #57595D;
   color: #AFB1B5;
