@@ -4,7 +4,17 @@
 }
 
 body {
-  background-color: #1F2125;
+  --body-background: #384D67;
+  --display-blackground: #15A4FA;
+  --header-background: #1F3650;
+  --table-blackground: #1C324A;
+  --button-background: var(--display-blackground);
+
+  --border: 1px solid #273E5B;
+
+  --text-color: #537095;
+
+  background-color: var(--body-background);
 }
 
 .user-interface {
@@ -21,15 +31,15 @@ body {
   align-items: center;
   min-width: 500px;
   min-height: 250px;
-  border: 2px solid black;
+  border: var(--border);
   border-radius: 10px;
-  background-color: #24635B;
+  background-color: var(--display-blackground);
 
   /* Стили для шрифта */
   font-size: 56px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #5AA593;
+  color: var(--text-color);
 }
 
 .user-interface .control-panel {
@@ -42,16 +52,16 @@ body {
 .user-interface .control-panel button {
   width: 150px;
   height: 40px;
-  border: 2px solid black;
+  border: var(--border);
   border-radius: 10px;
-  background-color: #B4B4B4;
+  background-color: var(--header-background);
   cursor: pointer;
 
   /* Стили для шрифта */
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
-  color: black;
+  color: var(--text-color);
 
   margin-left: 5px;
 }
@@ -67,66 +77,42 @@ body {
 
 .algorithms-list table {
   margin: 20px auto 0;
-  max-width: 700px;
-  display: flex;
-  flex-flow: column nowrap;
-  background-color: #2E3034;
+  max-width: 960px;
+  background-color: var(--table-blackground);
   border-collapse: collapse;
-  border-radius: 20px;
-  color: #BABBBF;
   border: 0;
+
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 .algorithms-list table th {
-  border-collapse: collapse;
-  padding: 0 5px;
-}
-
-.algorithms-list table tr:first-child {
-  border: 0;
-  border-radius: 20px;
-  background-color: #57595D;
-  color: #AFB1B5;
-}
-
-.algorithms-list table tr:first-child th:first-child {
-  border-top-left-radius: 20px;
-}
-
-.algorithms-list table tr:first-child th:last-child {
-  border-top-right-radius: 20px;
+  border: var(--border);
+  padding: 0 10px;
 }
 
 .algorithms-list table tr {
-  border-bottom: 2px solid #404145;
-  border-top: 2px solid #404145;
-  height: 50px;
+  height: 80px;
 }
 
-.algorithms-list table tr:last-child {
-  border-bottom: 0;
-}
-
-.algorithms-list table tr:not(:first-child):hover {
-  border-bottom: 2px solid #494B4F;
-  border-top: 2px solid #494B4F;
-  background-color: #37393D;
+.algorithms-list table tr:first-child {
+  background-color: var(--header-background);
 }
 
 .algorithms-list table td {
   width: 20%;
   text-align: center;
-  border-collapse: collapse;
+  border: var(--border);
+  padding: 0 10px;
 }
 
 .algorithms-list table td button {
   width: 80%;
   height: 25px;
   text-align: center;
-  border-radius: 10px;
   font-weight: bold;
-  background-color: #57595D;
-  color: #AFB1B5;
+  background-color: var(--button-background);
+  color: var(--text-color);
   border: 0;
   cursor: pointer;
 }
