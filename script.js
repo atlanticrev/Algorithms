@@ -91,13 +91,15 @@ function recursiveMaxElement(array) {
 
 }
 
+// Работает не верно
 function quicksort(array) {
 
   if (array.length < 2)
     return array;
 
   // От выбора этого числа зависит скорость алгоритма
-  let pivot = array[randomInt(0, array.length - 1)];
+  // let pivotIndex = randomInt(0, array.length - 1);
+  let pivot = array[0];
 
   let lesserElements = array.slice(1).filter((element) => {return element <= pivot});
 
@@ -143,6 +145,69 @@ function randomInt(start, stop) {
 }
 
 /*
+* Implementing data structures
+* */
+
+class Graph {
+
+  constructor() {
+
+    this._graph = {
+      you: ['alice', 'bob', 'claire'],
+      bob: ['anuj', 'peggy'],
+      alice: ['peggy'],
+      claire: ['thom', 'jonny'],
+      anuj: [],
+      peggy: [],
+      thom: [],
+      jonny: []
+    };
+
+  }
+
+  get graph() {
+
+    return this._graph;
+
+  }
+
+  addNode(nodeName, neighbors) {
+
+    this._graph[nodeName] = neighbors;
+
+  }
+
+}
+
+class Queue {
+
+  constructor(...elements) {
+
+    this._queue = [...elements];
+
+  }
+
+  get queue() {
+
+    return this._queue;
+
+  }
+
+  enqueue(element) {
+
+    return this._queue.push(element);
+
+  }
+
+  dequeue() {
+
+    return this._queue.shift();
+
+  }
+
+}
+
+/*
 * Test data
 * */
 const data = [];
@@ -156,9 +221,17 @@ for (let i = 0; i < 5; i++) {
 /*
 * Output
 * */
-console.log(data);
+
+console.log('Unsorted array:', data);
 const sortedArray = quicksort(data);
-console.log(sortedArray);
+console.log('Sorted array:', sortedArray);
+
+
+const graph = new Graph();
+let queueOfNodes = new Queue();
+
+console.log('Queue:', queueOfNodes.queue);
+console.log('Graph:', graph.graph);
 
 // console.log(binarySearch(sortedArray, 45));
 // console.log(recursiveSum(sortedArray));

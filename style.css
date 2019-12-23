@@ -17,6 +17,10 @@ body {
   background-color: var(--body-background);
 }
 
+/*
+* Display
+* */
+
 .user-interface {
   margin: 0 auto;
   max-width: 700px;
@@ -71,9 +75,8 @@ body {
 }
 
 /*
-* 1) Первая и последния строчки должны корректно отображать border-radius
-* 2) Корректно подсвечивать границы при наведении на строчку
-*/
+* Table
+* */
 
 .algorithms-list table {
   margin: 20px auto 0;
