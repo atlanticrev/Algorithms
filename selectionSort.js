@@ -1,19 +1,13 @@
-// Изменяет исходный массив
-function selectionSort(array) {
+function selectionSort(arr) {
+    let result = [];
+    let minEl = null;
 
-    let resultArray = [];
-    let smallest = null;
-
-    const len = array.length;
-
-    for (let i = 0; i < len; i++) {
-
-        smallest = findSmallest(array);
-        resultArray.push(array[smallest]);
-        array.splice(smallest, 1);
-
+    for (let i = 0; i < arr.length; i++) {
+        minEl = min(arr);
+        result.push(arr[minEl]);
+        // Go to arr without el just taken
+        arr.splice(minEl, 1);
     }
 
-    return resultArray;
-
+    return result;
 }
