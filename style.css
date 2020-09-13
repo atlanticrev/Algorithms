@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -115,4 +116,126 @@ body {
   color: var(--text-color);
   border: 0;
   cursor: pointer;
+=======
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  --body-background: #384D67;
+  --display-blackground: #15A4FA;
+  --header-background: #1F3650;
+  --table-blackground: #1C324A;
+  --button-background: var(--display-blackground);
+
+  --border: 1px solid #273E5B;
+
+  --text-color: #537095;
+
+  background-color: var(--body-background);
+}
+
+/*
+* Display
+* */
+
+.user-interface {
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.user-interface .display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 500px;
+  min-height: 250px;
+  border: var(--border);
+  border-radius: 10px;
+  background-color: var(--display-blackground);
+
+  /* Стили для шрифта */
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.user-interface .control-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-interface .control-panel button {
+  width: 150px;
+  height: 40px;
+  border: var(--border);
+  border-radius: 10px;
+  background-color: var(--header-background);
+  cursor: pointer;
+
+  /* Стили для шрифта */
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--text-color);
+
+  margin-left: 5px;
+}
+
+.user-interface .control-panel button:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/*
+* Table
+* */
+
+.algorithms-list table {
+  margin: 20px auto 0;
+  max-width: 960px;
+  background-color: var(--table-blackground);
+  border-collapse: collapse;
+  border: 0;
+
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.algorithms-list table th {
+  border: var(--border);
+  padding: 0 10px;
+}
+
+.algorithms-list table tr {
+  height: 80px;
+}
+
+.algorithms-list table tr:first-child {
+  background-color: var(--header-background);
+}
+
+.algorithms-list table td {
+  width: 20%;
+  text-align: center;
+  border: var(--border);
+  padding: 0 10px;
+}
+
+.algorithms-list table td button {
+  width: 80%;
+  height: 25px;
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--button-background);
+  color: var(--text-color);
+  border: 0;
+  cursor: pointer;
+>>>>>>> refs/remotes/origin/master
 }
