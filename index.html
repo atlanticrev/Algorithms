@@ -1,130 +1,64 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="./style.css">
-	<title>Algorithms</title>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="./style.css">
+		<title>Algorithms</title>
+	</head>
 
-<body>
-	<div class="user-interface">
-		<div class="display">
-			25.345
+	<body>
+		<div class="user-interface">
+			<div class="display">
+				25.345
+			</div>
+			<div class="control-panel">
+				<button>Reset</button>
+				<button>Start</button>
+				<button>End</button>
+				<button>Stop</button>
+				<button>Calculate</button>
+			</div>
 		</div>
-		<div class="control-panel">
-			<button>Reset</button>
-			<button>Start</button>
-			<button>End</button>
-			<button>Stop</button>
-			<button>Calculate</button>
+		<div class="algorithms-list">
+			<table>
+	<!--			<caption>Algorithms</caption>-->
+				<tr>
+					<th>Name</th>
+					<th>Average complexity</th>
+					<th>Worst complexity</th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr>
+					<td>Binary Search</td>
+					<td></td>
+					<td>O(log<sub>2</sub>n)</td>
+					<td></td>
+					<td><button>Use</button></td>
+				</tr>
+				<tr>
+					<td>Selection Sort</td>
+					<td></td>
+					<td>O(n<sup>2</sup>)</td>
+					<td></td>
+					<td><button>Use</button></td>
+				</tr>
+				<tr>
+					<td>Quick Sort</td>
+					<td></td>
+					<td>O(nlog<sub>2</sub>n)</td>
+					<td></td>
+					<td><button>Use</button></td>
+				</tr>
+			</table>
 		</div>
-	</div>
-	<div class="algorithms-list">
-		<table>
-<!--			<caption>Algorithms</caption>-->
-			<tr>
-				<th>Name</th>
-				<th>Average complexity</th>
-				<th>Worst complexity</th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<td>Binary Search</td>
-				<td></td>
-				<td>O(log<sub>2</sub>n)</td>
-				<td></td>
-				<td><button>Use</button></td>
-			</tr>
-			<tr>
-				<td>Selection Sort</td>
-				<td></td>
-				<td>O(n<sup>2</sup>)</td>
-				<td></td>
-				<td><button>Use</button></td>
-			</tr>
-			<tr>
-				<td>Quick Sort</td>
-				<td></td>
-				<td>O(nlog<sub>2</sub>n)</td>
-				<td></td>
-				<td><button>Use</button></td>
-			</tr>
-		</table>
-	</div>
 
-	<script src="utils.js"></script>
-	<script src="binarySearch.js"></script>
-	<script src="quicksort.js"></script>
-	<script src="recursiveSum.js"></script>
-	<script src="selectionSort.js"></script>
-	<script src="index.js"></script>
-</body>
-=======
-<!doctype html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="./style.css">
-	<title>Algorithms</title>
-</head>
-
-<body>
-	<div class="user-interface">
-		<div class="display">
-			25.345
-		</div>
-		<div class="control-panel">
-			<button>Reset</button>
-			<button>Start</button>
-			<button>End</button>
-			<button>Stop</button>
-			<button>Calculate</button>
-		</div>
-	</div>
-	
-	<div class="algorithms-list">
-		<table>
-<!--			<caption>Algorithms</caption>-->
-			<tr>
-				<th>Name</th>
-				<th>Average complexity</th>
-				<th>Worst complexity</th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<td>Binary Search</td>
-				<td></td>
-<!--				Need formula-->
-				<td>O(log<sub>2</sub>n)</td>
-				<td></td>
-				<td><button>Use</button></td>
-			</tr>
-			<tr>
-				<td>Selection Sort</td>
-				<td></td>
-<!--				Need formula-->
-				<td>O(n<sup>2</sup>)</td>
-				<td></td>
-				<td><button>Use</button></td>
-			</tr>
-			<tr>
-				<td>Quick Sort</td>
-				<td></td>
-<!--				Need formula-->
-				<td>O(nlog<sub>2</sub>n)</td>
-				<td></td>
-				<td><button>Use</button></td>
-			</tr>
-		</table>
-	</div>
-	<script src="script.js"></script>
-</body>
->>>>>>> refs/remotes/origin/master
+		<script src="utils.js"></script>
+		<script src="binarySearch.js"></script>
+		<script src="quicksort.js"></script>
+		<script src="recursiveSum.js"></script>
+		<script src="selectionSort.js"></script>
+		<script src="index.js"></script>
+	</body>
 </html>
