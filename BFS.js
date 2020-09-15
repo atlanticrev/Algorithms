@@ -30,7 +30,7 @@ let result = false;
 
 while (queue.length) {
     const node = queue.shift();
-    console.log(JSON.stringify(queue));
+    // console.log(JSON.stringify(queue));
     if (searched.indexOf(node) === -1) {
         if (node.isSeller) {
             result = true;
